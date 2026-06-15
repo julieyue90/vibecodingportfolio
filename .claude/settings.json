@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 -c ' *)",
+      "Bash(find /Users/julie/Documents -name \"金融Agent*\" -o -name \"*Agent团队*\" 2>/dev/null | head -10)",
+      "Read(//Users/julie/Documents/**)",
+      "Bash(open /Users/julie/Documents/trae_projects/vb/index.html)",
+      "Bash(python3 -m http.server 8080 --directory /Users/julie/Documents/trae_projects/vb/)",
+      "Bash(ipconfig getifaddr *)",
+      "Bash(awk '{print $2}')"
+    ]
+  }
+}
