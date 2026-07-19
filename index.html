@@ -871,7 +871,60 @@
             color: var(--text-secondary);
             font-size: 0.95rem;
         }
-        
+
+        .feature-summary {
+            margin-bottom: 20px;
+            padding-left: 16px;
+            border-left: 3px solid rgba(99, 102, 241, 0.45);
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.8;
+        }
+
+        .video-coming-soon {
+            cursor: default;
+            border: 1px dashed rgba(148, 163, 184, 0.35);
+            background: #111827;
+        }
+
+        .video-coming-soon:hover {
+            transform: none;
+        }
+
+        .video-coming-soon .video-placeholder {
+            background: transparent;
+            padding: 24px;
+            text-align: center;
+        }
+
+        .video-coming-soon-icon {
+            width: 52px;
+            height: 52px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(99, 102, 241, 0.35);
+            border-radius: 50%;
+            color: var(--primary-color);
+            background: rgba(99, 102, 241, 0.08);
+        }
+
+        .video-coming-soon-icon svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        .video-coming-soon-label {
+            color: var(--text-primary);
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        .video-coming-soon-note {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+        }
+
         .chart-preview {
             background: var(--dark-bg);
             border-radius: 12px;
@@ -1180,6 +1233,10 @@
             .project-card {
                 padding: 25px;
             }
+
+            .video-container {
+                max-width: 100% !important;
+            }
             
             .flow-pipeline {
                 flex-direction: column;
@@ -1204,14 +1261,15 @@
         <section id="projects" class="section">
             <h2 class="section-title">项目一览</h2>
             <div class="project-tabs">
-                <button class="project-tab active" data-project="1">项目一：Simulator Pro 股价事件模拟分析平台</button>
-                <button class="project-tab" data-project="2">项目二：FinCrew 金融分析智能体管理平台</button>
-                <button class="project-tab" data-project="3">项目三：B-Analyzer B站视频智能解析工具</button>
-                <button class="project-tab" data-project="4">项目四：FitFeast 智能健康饮食规划助手</button>
+                <button class="project-tab active" data-project="6">项目一：VB-S Virtual BA Supervisor Codex插件</button>
+                <button class="project-tab" data-project="1">项目二：Simulator Pro 股价事件模拟分析平台</button>
+                <button class="project-tab" data-project="5">项目三：Dope Presentor AI演示视频生成平台</button>
+                <button class="project-tab" data-project="3">项目四：B-Analyzer B站视频智能解析工具</button>
+                <button class="project-tab" data-project="4">项目五：FitFeast 智能健康饮食规划助手</button>
             </div>
 
             <!-- ====== Project 1 ====== -->
-            <div class="project-tab-content active" data-project="1">
+            <div class="project-tab-content" data-project="1">
                 <div class="project-card">
                     <div class="project-tags">
                         <span class="tag">C端工具</span>
@@ -1862,6 +1920,394 @@
                     </div>
                 </div>
             </div>
+
+            <!-- ====== Project 5 ====== -->
+            <div class="project-tab-content" data-project="5">
+                <div class="project-card">
+                    <div class="project-tags">
+                        <span class="tag">AI内容生产</span>
+                        <span class="tag">文档智能解析</span>
+                        <span class="tag">演示视频生成</span>
+                        <span class="tag">自动化工作流</span>
+                        <span class="tag">多模态输出</span>
+                    </div>
+
+                    <div class="project-meta">
+                        <div class="meta-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                                <circle cx="9" cy="7" r="4"/>
+                                <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                            </svg>
+                            <span>产品负责人</span>
+                        </div>
+                        <div class="meta-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="12 6 12 12 16 14"/>
+                            </svg>
+                            <span>持续迭代中</span>
+                        </div>
+                    </div>
+
+                    <p class="project-desc">
+                        Dope Presentor 是一款将 PDF、Word、PPT 等资料自动转换为专业演示内容与讲解视频的 AI 生产平台。产品串联文档解析、结构化大纲、逐页脚本、模板渲染、语音与字幕合成，将传统演示制作从分散的手工作业升级为可预览、可编辑、可重试的完整工作流。
+                    </p>
+
+                    <div class="flow-diagram">
+                        <div class="flow-title">从原始资料到演示视频的完整链路</div>
+
+                        <div class="flow-pipeline">
+                            <div class="flow-node" data-step="1" data-target="#dp-document">
+                                <div class="flow-node-card">
+                                    <div class="flow-node-number">1</div>
+                                    <div class="flow-node-icon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                            <polyline points="14 2 14 8 20 8"/>
+                                            <path d="M12 18v-6m-3 3 3-3 3 3"/>
+                                        </svg>
+                                    </div>
+                                    <div class="flow-node-label">上传原始资料</div>
+                                    <div class="flow-node-desc">PDF · Word · PPT</div>
+                                </div>
+                            </div>
+
+                            <div class="flow-connector">
+                                <svg viewBox="0 0 32 18">
+                                    <line class="arrow-line" x1="0" y1="9" x2="24" y2="9"/>
+                                    <polyline class="arrow-head" points="20,4 28,9 20,14"/>
+                                </svg>
+                            </div>
+
+                            <div class="flow-node" data-step="2" data-target="#dp-document">
+                                <div class="flow-node-card">
+                                    <div class="flow-node-number">2</div>
+                                    <div class="flow-node-icon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M4 4h16v16H4z"/>
+                                            <path d="M8 8h8M8 12h8M8 16h5"/>
+                                        </svg>
+                                    </div>
+                                    <div class="flow-node-label">AI解析提炼</div>
+                                    <div class="flow-node-desc">文本切分 · 重点识别</div>
+                                </div>
+                            </div>
+
+                            <div class="flow-connector">
+                                <svg viewBox="0 0 32 18">
+                                    <line class="arrow-line" x1="0" y1="9" x2="24" y2="9"/>
+                                    <polyline class="arrow-head" points="20,4 28,9 20,14"/>
+                                </svg>
+                            </div>
+
+                            <div class="flow-node" data-step="3" data-target="#dp-document">
+                                <div class="flow-node-card">
+                                    <div class="flow-node-number">3</div>
+                                    <div class="flow-node-icon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M9 18h6M10 22h4"/>
+                                            <path d="M8.5 14.5A7 7 0 1 1 15.5 14.5C14.5 15.3 14 16 14 18h-4c0-2-.5-2.7-1.5-3.5z"/>
+                                        </svg>
+                                    </div>
+                                    <div class="flow-node-label">生成大纲脚本</div>
+                                    <div class="flow-node-desc">页面结构 · 逐页讲解词</div>
+                                </div>
+                            </div>
+
+                            <div class="flow-connector">
+                                <svg viewBox="0 0 32 18">
+                                    <line class="arrow-line" x1="0" y1="9" x2="24" y2="9"/>
+                                    <polyline class="arrow-head" points="20,4 28,9 20,14"/>
+                                </svg>
+                            </div>
+
+                            <div class="flow-node" data-step="4" data-target="#dp-render">
+                                <div class="flow-node-card">
+                                    <div class="flow-node-number">4</div>
+                                    <div class="flow-node-icon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <rect x="3" y="3" width="18" height="14" rx="2"/>
+                                            <path d="M8 21h8M12 17v4"/>
+                                        </svg>
+                                    </div>
+                                    <div class="flow-node-label">选择主题并渲染</div>
+                                    <div class="flow-node-desc">版式 · 图表 · 视觉主题</div>
+                                </div>
+                            </div>
+
+                            <div class="flow-connector">
+                                <svg viewBox="0 0 32 18">
+                                    <line class="arrow-line" x1="0" y1="9" x2="24" y2="9"/>
+                                    <polyline class="arrow-head" points="20,4 28,9 20,14"/>
+                                </svg>
+                            </div>
+
+                            <div class="flow-node" data-step="5" data-target="#dp-video">
+                                <div class="flow-node-card">
+                                    <div class="flow-node-number">5</div>
+                                    <div class="flow-node-icon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <rect x="2" y="4" width="20" height="16" rx="2"/>
+                                            <polygon points="10 9 16 12 10 15 10 9"/>
+                                        </svg>
+                                    </div>
+                                    <div class="flow-node-label">合成演示视频</div>
+                                    <div class="flow-node-desc">旁白 · 字幕 · 视频导出</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="feature-section" id="dp-document">
+                        <h3 class="feature-title">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                <polyline points="14 2 14 8 20 8"/>
+                            </svg>
+                            多格式文档解析 · AI大纲与脚本编排
+                        </h3>
+                        <p class="feature-summary">统一接收 PDF、Word、PPT 等资料，自动提取章节与核心观点；根据目标页数和演示主题生成结构化大纲，将内容拆解为逐页标题、叙事角色、版式建议与讲解词，用户可随时调整。</p>
+                        <video class="video-container" controls playsinline preload="none" style="max-width: 70%;">
+                            <source src="视频/项目三/DopePresntor-1.mp4" type="video/mp4">
+                            您的浏览器不支持视频播放
+                        </video>
+                    </div>
+
+                    <div class="feature-section" id="dp-render">
+                        <h3 class="feature-title">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="3" width="18" height="14" rx="2"/>
+                                <path d="M7 7h5M7 11h10M15 7h2"/>
+                                <path d="M8 21h8M12 17v4"/>
+                            </svg>
+                            主题化页面渲染与实时预览
+                        </h3>
+                        <p class="feature-summary">通过主题、字号和页面布局参数统一控制整套演示风格，根据内容类型自动选择文本、图表或混合版式，并支持逐页预览和局部重试，降低整套返工成本。</p>
+                        <video class="video-container" controls playsinline preload="none" style="max-width: 70%;">
+                            <source src="视频/项目三/DopePresentor-2.mp4" type="video/mp4">
+                            您的浏览器不支持视频播放
+                        </video>
+                    </div>
+
+                    <div class="feature-section" id="dp-video">
+                        <h3 class="feature-title">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7H14a3.5 3.5 0 0 1 0 7H6"/>
+                            </svg>
+                            语音、字幕与视频自动合成
+                        </h3>
+                        <p class="feature-summary">将逐页讲解词转换为语音，自动匹配字幕与画面时长，再完成页面帧渲染和视频合成。任务状态、失败原因和重试入口集中呈现，方便跟踪长链路生产过程。</p>
+                        <video class="video-container" controls playsinline preload="none" style="max-width: 70%;">
+                            <source src="视频/项目三/DopePresentor-3.mp4" type="video/mp4">
+                            您的浏览器不支持视频播放
+                        </video>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ====== Project 6 ====== -->
+            <div class="project-tab-content active" data-project="6">
+                <div class="project-card">
+                    <div class="project-tags">
+                        <span class="tag">Codex Plugin</span>
+                        <span class="tag">Virtual BA Supervisor</span>
+                        <span class="tag">需求澄清</span>
+                        <span class="tag">验收驱动开发</span>
+                        <span class="tag">BA / Coder 辩论</span>
+                    </div>
+
+                    <div class="project-meta">
+                        <div class="meta-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                                <circle cx="9" cy="7" r="4"/>
+                                <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                            </svg>
+                            <span>产品负责人</span>
+                        </div>
+                        <div class="meta-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="12 6 12 12 16 14"/>
+                            </svg>
+                            <span>Phase 0 MVP</span>
+                        </div>
+                    </div>
+
+                    <p class="project-desc">
+                        VB-S 全称 Virtual BA Supervisor，是一款将现代 IT 技术项目经理带入 IDE 的 Codex 插件。它不替代编码 Agent，而是监督 AI 编码过程：将模糊需求澄清为可执行任务，持续汇总进度、风险与决策，在内部组织 BA 和 Coder 讨论，并只把真正影响产品方向、成本、性能、合规或跨团队范围的决定升级给用户。最终通过验收证据与修复提示词形成从需求到交付的闭环。
+                    </p>
+
+                    <div class="flow-diagram">
+                        <div class="flow-title">Phase 0 MVP：从模糊需求到验收修复闭环</div>
+
+                        <div class="flow-pipeline">
+                            <div class="flow-node" data-step="1" data-target="#vbs-clarify">
+                                <div class="flow-node-card">
+                                    <div class="flow-node-number">1</div>
+                                    <div class="flow-node-icon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"/>
+                                        </svg>
+                                    </div>
+                                    <div class="flow-node-label">/clarify 澄清需求</div>
+                                    <div class="flow-node-desc">light · standard · deep</div>
+                                </div>
+                            </div>
+
+                            <div class="flow-connector">
+                                <svg viewBox="0 0 32 18">
+                                    <line class="arrow-line" x1="0" y1="9" x2="24" y2="9"/>
+                                    <polyline class="arrow-head" points="20,4 28,9 20,14"/>
+                                </svg>
+                            </div>
+
+                            <div class="flow-node" data-step="2" data-target="#vbs-clarify">
+                                <div class="flow-node-card">
+                                    <div class="flow-node-number">2</div>
+                                    <div class="flow-node-icon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <circle cx="12" cy="12" r="3"/>
+                                            <path d="M19.4 15a1.7 1.7 0 0 0 .34 1.88l.06.06-2.83 2.83-.06-.06A1.7 1.7 0 0 0 15 19.4a1.7 1.7 0 0 0-1 .6 1.7 1.7 0 0 0-.4 1.1V21h-4v-.09A1.7 1.7 0 0 0 8.6 19.4a1.7 1.7 0 0 0-1.88.34l-.06.06-2.83-2.83.06-.06A1.7 1.7 0 0 0 4.6 15a1.7 1.7 0 0 0-.6-1 1.7 1.7 0 0 0-1.1-.4H3v-4h.09A1.7 1.7 0 0 0 4.6 8.6a1.7 1.7 0 0 0-.34-1.88l-.06-.06 2.83-2.83.06.06A1.7 1.7 0 0 0 9 4.6a1.7 1.7 0 0 0 1-.6 1.7 1.7 0 0 0 .4-1.1V3h4v.09A1.7 1.7 0 0 0 15.4 4.6a1.7 1.7 0 0 0 1.88-.34l.06-.06 2.83 2.83-.06.06A1.7 1.7 0 0 0 19.4 9c.3.4.6.7 1 .9.3.1.7.1 1.1.1h.5v4h-.09a1.7 1.7 0 0 0-1.51 1z"/>
+                                        </svg>
+                                    </div>
+                                    <div class="flow-node-label">生成任务三件套</div>
+                                    <div class="flow-node-desc">Prompt · Checklist · 验收标准</div>
+                                </div>
+                            </div>
+
+                            <div class="flow-connector">
+                                <svg viewBox="0 0 32 18">
+                                    <line class="arrow-line" x1="0" y1="9" x2="24" y2="9"/>
+                                    <polyline class="arrow-head" points="20,4 28,9 20,14"/>
+                                </svg>
+                            </div>
+
+                            <div class="flow-node" data-step="3" data-target="#vbs-runtime">
+                                <div class="flow-node-card">
+                                    <div class="flow-node-number">3</div>
+                                    <div class="flow-node-icon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M3 3h7v7H3zM14 3h7v7h-7zM3 14h7v7H3zM14 14h7v7h-7z"/>
+                                        </svg>
+                                    </div>
+                                    <div class="flow-node-label">发送给 Codex</div>
+                                    <div class="flow-node-desc">创建任务 · 路由执行</div>
+                                </div>
+                            </div>
+
+                            <div class="flow-connector">
+                                <svg viewBox="0 0 32 18">
+                                    <line class="arrow-line" x1="0" y1="9" x2="24" y2="9"/>
+                                    <polyline class="arrow-head" points="20,4 28,9 20,14"/>
+                                </svg>
+                            </div>
+
+                            <div class="flow-node" data-step="4" data-target="#vbs-acceptance">
+                                <div class="flow-node-card">
+                                    <div class="flow-node-number">4</div>
+                                    <div class="flow-node-icon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M9 11l3 3L22 4"/>
+                                            <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+                                        </svg>
+                                    </div>
+                                    <div class="flow-node-label">Stop Hook 验收</div>
+                                    <div class="flow-node-desc">测试脚本 · 执行证据 · 缺口</div>
+                                </div>
+                            </div>
+
+                            <div class="flow-connector">
+                                <svg viewBox="0 0 32 18">
+                                    <line class="arrow-line" x1="0" y1="9" x2="24" y2="9"/>
+                                    <polyline class="arrow-head" points="20,4 28,9 20,14"/>
+                                </svg>
+                            </div>
+
+                            <div class="flow-node" data-step="5" data-target="#vbs-acceptance">
+                                <div class="flow-node-card">
+                                    <div class="flow-node-number">5</div>
+                                    <div class="flow-node-icon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M12 3v12M7 10l5 5 5-5"/>
+                                            <path d="M5 21h14a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2"/>
+                                        </svg>
+                                    </div>
+                                    <div class="flow-node-label">失败自动生成修复</div>
+                                    <div class="flow-node-desc">Repair Prompt · 下一轮执行</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="feature-section" id="vbs-clarify">
+                        <h3 class="feature-title">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"/>
+                            </svg>
+                            需求澄清与任务三件套
+                        </h3>
+                        <p class="feature-summary"><strong style="color: var(--text-primary);">/clarify [requirement] mode=light|standard|deep</strong> 将模糊描述转化为结构化需求，并一次生成三项可直接交付给 Codex 的内容：可执行提示词、任务拆解清单和验收标准草案。不同深度模式让用户可以在快速补全与完整需求分析之间选择。</p>
+                    </div>
+
+                    <div class="feature-section" id="vbs-supervision">
+                        <h3 class="feature-title">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                            </svg>
+                            三级监督模型：减少无效打扰
+                        </h3>
+                        <p class="feature-summary"><strong style="color: var(--text-primary);">L1 自动处理</strong> 优先利用本地代码、文档、历史决策和默认值解决问题；<strong style="color: var(--text-primary);">L2 内部讨论</strong> 组织 BA 与 Coder 在插件内部收敛可执行方案；只有涉及产品方向、成本、性能、合规、跨团队范围，或三轮讨论后仍无法解决的问题，才进入 <strong style="color: var(--text-primary);">L3 用户决策</strong>。</p>
+                    </div>
+
+                    <div class="feature-section" id="vbs-report">
+                        <h3 class="feature-title">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M3 3h7v7H3zM14 3h7v7h-7zM3 14h7v7H3zM14 14h7v7h-7z"/>
+                            </svg>
+                            进度、风险与决策记忆
+                        </h3>
+                        <p class="feature-summary"><strong style="color: var(--text-primary);">/vbs report</strong> 汇总总体进度、已完成和进行中任务、阻塞项、测试状态与后续计划；<strong style="color: var(--text-primary);">/vbs risks</strong> 扫描未解决假设、阻塞和决策债务；<strong style="color: var(--text-primary);">/vbs decisions</strong> 保留历史决定及其理由。报告频率与内容可通过 <strong style="color: var(--text-primary);">/vbs config</strong> 配置。</p>
+                    </div>
+
+                    <div class="feature-section" id="vbs-deepdive">
+                        <h3 class="feature-title">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 11l3 3L22 4"/>
+                                <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+                            </svg>
+                            DeepDive 证据化多轮辩论
+                        </h3>
+                        <p class="feature-summary"><strong style="color: var(--text-primary);">/deepdive [requirement] X=[rounds]</strong> 启动结构化多轮讨论。BA 与 Coder 分别给出观点、证据、反方意见、风险和决策影响，每个关键论点必须引用项目证据或官方资料；最终结果可让用户直接选择“采纳 A”“采纳 B”或“继续追问”。</p>
+
+                    </div>
+
+                    <div class="feature-section" id="vbs-acceptance">
+                        <h3 class="feature-title">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 11l3 3L22 4"/>
+                                <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+                            </svg>
+                            验收驱动与自动修复闭环
+                        </h3>
+                        <p class="feature-summary">每个已完成功能都必须关联验收测试脚本或命令，覆盖成功路径与失败/边界路径，并附带真实执行状态、证据和剩余缺口。VB-S 不允许在没有执行证据时将功能标记为通过；验收失败后会自动生成 Repair Prompt，进入下一轮 Codex 修复。</p>
+                    </div>
+
+                    <div class="feature-section" id="vbs-runtime">
+                        <h3 class="feature-title">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                            </svg>
+                            Codex Runtime 与定时监督
+                        </h3>
+                        <p class="feature-summary">Runtime 适配层将“发送给 Codex”路由到任务创建或消息发送工具，将 Stop Hook 完成信号转换为验收跟进，并在失败时衔接修复提示词。报告配置还可以生成 Codex Automation，例如工作日 18:00 自动输出包含验收覆盖率的监督报告。</p>
+                    </div>
+
+                </div>
+            </div>
         </section>
 
     </main>
@@ -1903,7 +2349,7 @@
         document.querySelectorAll('.flow-node').forEach(node => {
             node.addEventListener('click', function(e) {
                 const step = this.dataset.step;
-                const target = stepTargets[step];
+                const target = this.dataset.target || stepTargets[step];
                 if (target) {
                     document.querySelector(target).scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }
